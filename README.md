@@ -9,7 +9,7 @@ I connected this project to MongoDb using PyMogno.
  Users can not see others entries because of the authorizaiton method I impleneted.
  Admin can see all users journals entries. 
  Admin can download users journal entries.
- Custom html and css code: html5.up. 
+ Provided html and css code: html5.up. 
 
 
  This is the website side of the project I, Jack Utzerath, was in charge of.
