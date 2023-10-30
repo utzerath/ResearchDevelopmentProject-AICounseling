@@ -43,13 +43,6 @@ Installed MySQL
 https://www.mysql.com/downloads/
 
 version- 
-mysql installer web community 8.0.34.msi
-
-mySql root password- S?uy733pC7oT
-
-*in mySql command line client*
-mysql -u root -p // command to start command line client
-
 Create database aICounseling; //created database
 show databases; //shows databases
 
