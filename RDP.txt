@@ -1,0 +1,115 @@
+Jack Utzerath
+RDP
+Daily Journal
+
+9/27/23
+Installed Git on Windows
+Download site: https://gitforwindows.org/
+
+Check if download
+Git Bash -> 
+$ git version 
+//Should output this
+git version 2.34.1.windows.1
+
+(Already have Python downloaded for Windows)
+
+Started Project
+
+IDE used- VS Code
+
+I am going to be using a virtual environment to manage the project before deployment
+(Django comes with a integrated server to test)
+
+Steps to start development today:
+-Create a project directory
+-Create a virtual environment
+-Create Django Project
+-Run the development server
+-Configured connection to mongodb using pymongo
+
+Opened New Terminal
+mkdir buildDjango //Makes directory
+cd buildDjango // Go into directory
+python3 -m venv rdp-env //Sets up virtual environment
+rdp-env\Scripts\activate //activating virtual environment
+pip3 install django //installing django
+python3 -m django version //check to see if django is installed
+django-admin --version //check to see if django is installed
+django-admin startproject aICounseling //start django project
+python3 manage.py runserver //runs the server
+
+Installed MySQL
+https://www.mysql.com/downloads/
+
+version- 
+mysql installer web community 8.0.34.msi
+
+mySql root password- S?uy733pC7oT
+
+*in mySql command line client*
+mysql -u root -p // command to start command line client
+
+Create database aICounseling; //created database
+show databases; //shows databases
+
+*back in vsCode terminal* 
+pip3 install mysqlclient //python driver for mySQL
+
+added database to setting.py in project 
+
+DATABASES = {   
+    'default': {   
+        'ENGINE': 'django.db.backends.mysql',   
+        'NAME': 'aICounseling',   
+        'USER': 'root',   
+        'PASSWORD': 'S?uy733pC7oT',   
+        'HOST': '127.0.0.1',   
+        'PORT': '3306',   
+        'OPTIONS': {   
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
+        }   
+    }   
+} 
+
+sql_mode: The session SQL mode will be set to the given string. It defaults to 'STATIC_TRANS_TABLES' to prevent invalid or missing values from being stored in the database.
+
+Run the migrate command to use the models in these apps and build their respective table structure in the current mysql database.
+
+python manage.py migrate
+
+Inside the MySQL terminal, run the following commands to show tables:
+use aICounseling; 
+Show tables;
+CREATE USER 'admindjango'@'localhost' IDENTIFIED BY_'S?uy733pC7oT'; //created a user for django
+
+
+
+Installed MySql in vsCode so I can quickly check tables in vsCode
+
+
+Note for later: Maybe update user and password in setting.py file as the command above.
+
+Tomorrow need to check mySQL connection and make sure its right then set up APIs-> setting up tools and environment then Install and set up DRF 
+
+Setting up an app
+python3 manage.py startapp journal // Started app journal
+Remember to add app to INSTALLED_APPS in settings.py in project
+
+Make sure pymongo is installed
+python3 -m pip install pymongo
+//pymongo will be the library to connect to mongoDB
+
+created new .py file called db_connection
+Code in here:
+import pymongo
+url = 'mongodb://localhost:27017'
+client = pymongo.MongoClient(url)
+db = client['aICounseling']
+
+
+
+
+
+
+
