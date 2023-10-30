@@ -58,43 +58,6 @@ pip3 install mysqlclient //python driver for mySQL
 
 added database to setting.py in project 
 
-DATABASES = {   
-    'default': {   
-        'ENGINE': 'django.db.backends.mysql',   
-        'NAME': 'aICounseling',   
-        'USER': 'root',   
-        'PASSWORD': 'S?uy733pC7oT',   
-        'HOST': '127.0.0.1',   
-        'PORT': '3306',   
-        'OPTIONS': {   
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"   
-        }   
-    }   
-} 
-
-sql_mode: The session SQL mode will be set to the given string. It defaults to 'STATIC_TRANS_TABLES' to prevent invalid or missing values from being stored in the database.
-
-Run the migrate command to use the models in these apps and build their respective table structure in the current mysql database.
-
-python manage.py migrate
-
-Inside the MySQL terminal, run the following commands to show tables:
-use aICounseling; 
-Show tables;
-CREATE USER 'admindjango'@'localhost' IDENTIFIED BY_'S?uy733pC7oT'; //created a user for django
-
-
-
-Installed MySql in vsCode so I can quickly check tables in vsCode
-
-
-Note for later: Maybe update user and password in setting.py file as the command above.
-
-Tomorrow need to check mySQL connection and make sure its right then set up APIs-> setting up tools and environment then Install and set up DRF 
-
-Setting up an app
-python3 manage.py startapp journal // Started app journal
-Remember to add app to INSTALLED_APPS in settings.py in project
 
 Make sure pymongo is installed
 python3 -m pip install pymongo
