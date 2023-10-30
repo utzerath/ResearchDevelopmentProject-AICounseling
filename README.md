@@ -1,7 +1,7 @@
 # ResearchDevelopmentProject-AICounseling
 Learn more about this Research and Development Project (Artificial Intelligence Augmented Counseling) at https://research.gcu.edu/rdp/cse
 
-This is a django project than I made from scratch. This website is dynamic with serval of pages. I made a user log in page, a sign up pages, a page where the user can upload journal, a page where they can see their previous journal entries and download them, an admin dashboard page, and an authorizion method. 
+This is a django project than I made from scratch. This website is dynamic with serval of pages. I made a user log in page, a sign up page, a page where the user can upload journals, a page where they can see their previous journal entries and download them, an admin dashboard page, and an authorizion method. 
 
 I connected this project to MongoDb using PyMogno.
  The user can upload text entries, video files, audio files, and more to this Database.
