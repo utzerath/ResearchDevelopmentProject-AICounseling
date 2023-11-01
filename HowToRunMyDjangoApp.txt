@@ -1,0 +1,51 @@
+Quick Run Directions: 
+Open and Navigate terminal to C:\Users\Mental Heath RDP\SenSymWebsite\buildDjango: use cd command
+Acitave virtual environment: rdp-env\Scripts\activate
+Go to C:\Users\Mental Heath RDP\SenSymWebsite\buildDjango\aICounseling  in the terminal and run development server: python manage.py runserver
+open chrome and navigate - http://127.0.0.1:8000/
+
+Quick Log In Details:
+
+** user log in **
+username: user
+password: 123
+**admin log in **
+username: admin
+password: 123
+
+
+
+
+Download and Extract Folder
+Load Folder onto VsCode
+Make sure pip and python3 are installed
+install Django, gridFS, and PyMongo in the terminals
+
+Open and Navigate terminal to C:\Users\Mental Heath RDP\SenSymWebsite\buildDjango\aICounseling: use cd command
+Set up Virual environment:python -m venv rdp-env
+**Only have to do this once**
+
+
+Acitave virtual environment: rdp-env\Scripts\activate
+pip install django
+pip install django-sass-processor
+pip install pymongo
+pip install Pillow
+Go to C:\Users\Mental Heath RDP\SenSymWebsite\buildDjango\aICounseling and run development server: python manage.py runserver
+Open Chrome and naviagte to Django Development Server URL: 
+
+
+
+
+
+
+Connect to your local MongoDB:
+in vscode, open up db_connection.py and make sure the url is to your MongoDB
+import pymongo
+from gridfs import GridFS
+url = 'mongodb://192.168.8.190:27017/'
+client = pymongo.MongoClient(url)
+db = client['aICounseling']
+fs = GridFS(db,collection = 'files')
+
+how to download files using gridFS
